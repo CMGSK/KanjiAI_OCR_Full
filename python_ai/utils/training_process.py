@@ -5,14 +5,22 @@ from tensorflow import keras
 from keras import layers
 from keras.models import Sequential
 import time
+import training_utils as util
 
 
 dataset_dir = pathlib.Path('../dataset/Kanji_Images')
-dataset_size = sum(len(os.listdir(f'../dataset/Kanji_Images/{directory}/')) for directory in os.listdir('../dataset/Kanji_Images'))
-batch_size = 2
+samples_per_label = 80
 source_height = 64
 source_width = 64
-epochs = 5
+batch_size = 256
+epochs = 50
+
+util.clear_gitkeep()
+util.feed_dataset()
+util.cleanup()
+
+util.dataset_normalization(samples_per_label, source_height, source_width)
+dataset_size = sum(len(os.listdir(f'../dataset/Kanji_Images/{directory}/')) for directory in os.listdir('../dataset/Kanji_Images'))
 
 training_dataset = tf.keras.utils.image_dataset_from_directory (
     dataset_dir=dataset_dir,

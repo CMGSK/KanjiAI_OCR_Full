@@ -1,6 +1,5 @@
 def is_pitch_black(img):
-    pixels = img.getdata()  # get flattened array of pixels
-    # Check whether a pixel is black (0) and if % of black pixels exceeds 80, return True as it IS pitch black.
+    pixels = img.getdata()
     blacks = 0
     for p in pixels:
         if p != 0:
