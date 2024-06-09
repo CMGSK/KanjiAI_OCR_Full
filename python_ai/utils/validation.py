@@ -13,7 +13,7 @@ source_height = 64
 source_width = 64
 
 training_dataset = tf.keras.utils.image_dataset_from_directory(
-    dataset_dir,
+    directory=dataset_dir,
     validation_split=0.2,
     subset='training',
     seed=39,
@@ -21,7 +21,7 @@ training_dataset = tf.keras.utils.image_dataset_from_directory(
     batch_size=batch_size)
 
 validation_dataset = tf.keras.utils.image_dataset_from_directory(
-    dataset_dir,
+    directory=dataset_dir,
     validation_split=0.2,
     subset='validation',
     seed=39,
@@ -29,6 +29,8 @@ validation_dataset = tf.keras.utils.image_dataset_from_directory(
     batch_size=batch_size)
 
 model = tf.keras.models.load_model('../trained_models/fullmodel.keras')
+
+labels = training_dataset.class_names
 
 for guess in os.listdir('../example_images/'):
     image = tf.keras.utils.load_img(f'example_images/{guess}', target_size=(source_height, source_width))

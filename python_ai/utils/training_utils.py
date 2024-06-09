@@ -76,7 +76,7 @@ def feed_dataset():
 
 
 def dataset_normalization(lower_limit: int, upper_limit: int, sh: int, sw: int):
-    dir = '../dataset/test'
+    dir = '../dataset/Kanji_Images'
     for utf in os.listdir(dir):
         cnt = 0
         maxrnd = len(content := os.listdir(f'{dir}/{utf}/'))
@@ -94,11 +94,15 @@ def dataset_normalization(lower_limit: int, upper_limit: int, sh: int, sw: int):
                 augmented_img = img.crop((top, left, right, bottom))
                 if augmented_img.size != (sw, sh):
                     augmented_img = augmented_img.resize((sw, sh))
+                print(f'Validation addition --> {dir}/{utf}/augmented_{cnt}.png')
                 augmented_img.save(f"{dir}/{utf}/augmented_{cnt}.png")
                 cnt+=1
             continue
-        if length := len(os.listdir(f'{dir}/{utf}/')) > upper_limit:
-            os.remove(random.sample(os.listdir(f'{dir}/{utf}/'), length - upper_limit))
+        if (length := len(os.listdir(f'{dir}/{utf}/'))) > upper_limit:
+            for k in (random.sample(os.listdir(f'{dir}/{utf}/'), length - upper_limit)):
+                print(f'Validation deletion --> {dir}/{utf}/{k}')
+                os.remove(f'{dir}/{utf}/{k}')
+
 
 
 def load_img(img: str, source_width: int, source_height: int):
