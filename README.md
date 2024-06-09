@@ -25,9 +25,13 @@
 
 # DISCLAIMER:
 
-We do provide all the necessary scripts. Some of them have hardcoded paths, debug functions, and several other things that may break or show unexpected behaviours if the use instructions are not followed precisely. 
+ESP: Todos los scripts necesarios estan incluidos. Algunos funcionamientos pueden tener resultados inesperados por el estado del desarrollo y labores de optimizacion que estoy llevando a cabo.
 
-We have trained this AI with less labels and epochs than we should have. The reason for this is saving time for deliver a proper demo in time. This means it may underperform with certain kanji and be less precise distinguishing between those with high similarities.
+Se ha entrenado a la IA con muchas menos muestras y epocas de lo ideal para poder mostrar todo un desarrollo funcional.
+
+We do provide all the necessary scripts. Some of them have hardcoded paths, debug functions, and several other things that may break or show unexpected behaviours due to an early stage of development and ongoing optimization processes being developed.
+
+We have trained this AI with much more less labels and epochs than we should have. The reason for this is saving time for deliver a proper demo in time. This means it may underperform with certain kanji and be less precise distinguishing between those with high similarities.
 
 
 ## Run locally
@@ -94,6 +98,8 @@ This project is on a developing stage and we have not implemented a script to au
 
 ```https
   POST kanji.otterleek.com/
+    or
+  POST otterleek.ddns.net:39000/
 ```
 
 | Parameter | Type        | Description                |

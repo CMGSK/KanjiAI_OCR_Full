@@ -1,6 +1,8 @@
+import matplotlib.pyplot as plt
 import tensorflow as tf
 import pathlib
 import os
+import numpy as np
 from tensorflow import keras
 from keras import layers
 from keras.models import Sequential
@@ -19,6 +21,9 @@ epochs = 50
 util.feed_dataset()
 util.clear_gitkeep()
 util.cleanup()
+
+l = os.listdir('../dataset/Kanji_Images')
+np.save('../dataset/labels.npy', np.array(l))
 
 util.dataset_normalization(sample_lower_limit, sample_upper_limit, source_height, source_width)
 dataset_size = sum(len(os.listdir(f'../dataset/Kanji_Images/{directory}/')) for directory in os.listdir('../dataset/Kanji_Images'))
@@ -67,7 +72,27 @@ model.compile(optimizer=optimizer_model,
               loss=loss_model,
               metrics=['accuracy'])
 
-training = model.fit(x=training_dataset,
+training = model.fit(training_dataset,
                      validation_data=validation_dataset,
                      epochs=epochs)
 model.save(f'../trained_models/fullmodel_{round(time.time() * 1000)}.keras')
+
+accuracy = training.history['accuracy']
+acc_value = training.history['val_accuracy']
+
+loss = training.history['loss']
+loss_value = training.history['val_loss']
+
+plt.figure(figsize=(8, 8))
+plt.subplot(1, 2, 1)
+plt.plot(range(epochs), accuracy, label='Training Accuracy')
+plt.plot(range(epochs), acc_value, label='Validation Accuracy')
+plt.legend(loc='lower right')
+plt.title('Training and Validation Accuracy')
+
+plt.subplot(1, 2, 2)
+plt.plot(range(epochs), loss, label='Training Loss')
+plt.plot(range(epochs), loss_value, label='Validation Loss')
+plt.legend(loc='upper right')
+plt.title('Training and Validation Loss')
+plt.show()
