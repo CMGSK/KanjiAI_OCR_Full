@@ -60,7 +60,7 @@ To deploy the IA locally end expose it to global network:
 
  - Install Docker
  - Follow the instructions provided in the section "Networking" of the documentation
- - Open the correct port
+ - Open the correct port (default on 39000)
  - Clone the project
  - Download the keras trained model from the section above and place it into python's trained_models folder.
  - Create a container with the Dockerfile provided in the repository and the documentation

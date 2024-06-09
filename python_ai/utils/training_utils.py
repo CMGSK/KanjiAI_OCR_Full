@@ -15,7 +15,7 @@ from timeit import default_timer as timer
 def cleanup():
     d = '../dataset/Kanji_Images/'
     for dir in os.listdir(d):
-        if len(os.listdir(d + dir)) < 3:
+        if len(os.listdir(d + dir)) < 10:
             shutil.rmtree(d + dir)
 
 
@@ -75,12 +75,12 @@ def feed_dataset():
     print('Total time: ' + str(timer() - t))
 
 
-def dataset_normalization(target: int, sh: int, sw: int):
+def dataset_normalization(lower_limit: int, upper_limit: int, sh: int, sw: int):
     dir = '../dataset/test'
     for utf in os.listdir(dir):
         cnt = 0
         maxrnd = len(content := os.listdir(f'{dir}/{utf}/'))
-        while len(os.listdir(f'{dir}/{utf}/')) < target:
+        while len(os.listdir(f'{dir}/{utf}/')) < lower_limit:
             with Image.open(f'{dir}/{utf}/{content[random.randint(0, maxrnd-1)]}') as img:
                 img = img.resize((sw+random.randint(-5,  5), sh+random.randint(-5, 5)))
                 img = img.rotate(random.randint(-20, 20))
@@ -97,6 +97,9 @@ def dataset_normalization(target: int, sh: int, sw: int):
                 augmented_img.save(f"{dir}/{utf}/augmented_{cnt}.png")
                 cnt+=1
             continue
+        if length := len(os.listdir(f'{dir}/{utf}/')) > upper_limit:
+            os.remove(random.sample(os.listdir(f'{dir}/{utf}/'), length - upper_limit))
+
 
 def load_img(img: str, source_width: int, source_height: int):
     image = tf.io.read_file(img)

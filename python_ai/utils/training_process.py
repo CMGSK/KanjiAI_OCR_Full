@@ -9,17 +9,18 @@ import training_utils as util
 
 
 dataset_dir = pathlib.Path('../dataset/Kanji_Images')
-samples_per_label = 80
+sample_upper_limit = 500
+sample_lower_limit = 80
 source_height = 64
 source_width = 64
 batch_size = 256
 epochs = 50
 
-util.clear_gitkeep()
 util.feed_dataset()
+util.clear_gitkeep()
 util.cleanup()
 
-util.dataset_normalization(samples_per_label, source_height, source_width)
+util.dataset_normalization(sample_lower_limit, sample_upper_limit, source_height, source_width)
 dataset_size = sum(len(os.listdir(f'../dataset/Kanji_Images/{directory}/')) for directory in os.listdir('../dataset/Kanji_Images'))
 
 training_dataset = tf.keras.utils.image_dataset_from_directory (
