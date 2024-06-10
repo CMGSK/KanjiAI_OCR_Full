@@ -1,12 +1,12 @@
 # Fdb version 4
-["makeindex main.idx"] 1717859547.9818 "main.idx" "main.ind" "main" 1718001723.04507 0
-  "main.idx" 1718001721.96674 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1718040895.9018 "main.idx" "main.ind" "main" 1718040929.1867 0
+  "main.idx" 1718040928.2802 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1718001721.53454 "/home/Rin/programming/PDAM_Final/latex_docu/tex_files/main.tex" "main.pdf" "main" 1718001723.04528 0
-  "/home/Rin/programming/PDAM_Final/latex_docu/tex_files/main.tex" 1718001721.33674 162193 8370e455c4ffc86cc9b360ebb7ccd33b ""
+["pdflatex"] 1718040927.95848 "/home/Rin/programming/PDAM_Final/latex_docu/tex_files/main.tex" "main.pdf" "main" 1718040929.18685 0
+  "/home/Rin/programming/PDAM_Final/latex_docu/tex_files/main.tex" 1718040927.7702 162309 fd0890e4a166a25ce2574cfc6658ee0f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1716849630 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1716849630 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1716849630 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -152,16 +152,17 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1716849630 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1717157736.58667 5312047 b07fcd2a9090df96fc745b92a3db793b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1717157726 7112988 76f6ff12e183e6319e79e05d4060d689 ""
-  "main.aux" 1718001722.94008 8965 fc1b6ed1be6dc3be19ea4cb477518755 "pdflatex"
-  "main.ind" 1717859548.04004 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1718001722.94008 3345 5c69f025cce781c51871d76fa6b5e5c9 "pdflatex"
-  "main.tex" 1718001721.33674 162193 8370e455c4ffc86cc9b360ebb7ccd33b ""
-  "main.toc" 1718001722.94008 3426 fd465659c3dd4579266973cbda0d6950 "pdflatex"
+  "main.aux" 1718040929.09687 9068 cab2377e72cc3cc481450f5804acf3af "pdflatex"
+  "main.ind" 1718040895.95687 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.out" 1718040929.09687 3345 5c69f025cce781c51871d76fa6b5e5c9 "pdflatex"
+  "main.tex" 1718040927.7702 162309 fd0890e4a166a25ce2574cfc6658ee0f ""
+  "main.toc" 1718040929.09687 3426 06666c5e72b5c15d6ad72d61b0d8f1c1 "pdflatex"
   "pics/Deploy.png" 1717419262.28684 20800 7540749eb56e5e57afb7cf5bcc05c2f9 ""
   "pics/LeNetStyle.png" 1717572627.33607 40634 c045f9103def1c1d0e1292278592c721 ""
   "pics/Sequence.png" 1717419267.23684 65259 0bea2b215844e852db9d2331913f492b ""
   "pics/State.png" 1717419268.43684 34400 9e3cb71e113384e0809c639b62d6d9d5 ""
   "pics/UseCases.png" 1717419270.2635 45368 654ad7d7f4f2dbcc7b1c824675de78b1 ""
+  "pics/acc_and_loss.png" 1718040687.0602 62266 c10bc2c07d80e11352f8289f2a5d6277 ""
   "pics/cnn.jpg" 1717419259.6235 64136 677cc7a17d6784ae91b26778c8d3ddb2 ""
   "pics/convolution.png" 1717419260.9835 17548 e7b7f91199fd30416ed2a2bc56ed56b8 ""
   "pics/gradexp.png" 1717419263.58684 68495 0cc5573ffe0b4baf124b7e5baa4df071 ""

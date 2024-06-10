@@ -449,6 +449,12 @@ Es importante realizar un batch de validación porque entrenar una IA y validar 
 
 La idea detrás de este desarrollo es poder obtener información precisa sobre el rendimiento de nuestra IA, de forma que podamos ajustar sus parámetros en base a ensayo-error (práctica muy común en entrenamiento de IAs) hasta dar con unos ajustes cuyo rendimiento sea satisfactorio. Esto nos permitirá entrenar un número considerable de épocas, hasta que los resultados de la validación muestren un estancamiento del ratio acierto/error.
 
+\begin{figure}[!ht]
+	\centering
+	\label{fig:res}
+	\includegraphics[scale=0.32]{pics/acc_and_loss.png}
+\end{figure}
+
 Cabe mencionar que es en este punto donde debemos dejar de entrenar la IA, ya que forzarla a continuar un número excesivo de épocas para conseguir mejoras marginales, puede generar el llamado \hyperref[sec:terms]{\textit{overfitting}\tec}, que causara un mayor número de falsos resultados a la hora de trabajar con datos ajenos al dataset original.
 
 
