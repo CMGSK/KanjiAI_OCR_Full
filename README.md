@@ -21,7 +21,9 @@
 
 [Kanji_Dataset.zip](https://nextcloud.otterleek.com/s/zxdKKBXD5TKq8zQ)
 
-[Fullmodel.keras](https://nextcloud.otterleek.com/s/Ggb9npniamTKk5Q)
+[Fullmodel_*.keras](https://nextcloud.otterleek.com/s/GjMLj8d4eofxH6K)
+
+[app_release.apk](https://nextcloud.otterleek.com/s/P7ipkp33ANG98Cj)
 
 # DISCLAIMER:
 
