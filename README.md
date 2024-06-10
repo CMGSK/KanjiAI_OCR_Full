@@ -31,6 +31,8 @@ ESP: Todos los scripts necesarios estan incluidos. Algunos funcionamientos puede
 
 Se ha entrenado a la IA con muchas menos muestras y epocas de lo ideal para poder mostrar todo un desarrollo funcional.
 
+Por estandar, todo el arhcivo README estara escrito en inglés a partir de aquí. Cualquier duda puede consultarse en la documentacion completa en español o escribiendo a mi correo personal.
+
 We do provide all the necessary scripts. Some of them have hardcoded paths, debug functions, and several other things that may break or show unexpected behaviours due to an early stage of development and ongoing optimization processes being developed.
 
 We have trained this AI with much more less labels and epochs than we should have. The reason for this is saving time for deliver a proper demo in time. This means it may underperform with certain kanji and be less precise distinguishing between those with high similarities.
