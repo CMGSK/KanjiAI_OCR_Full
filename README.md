@@ -27,7 +27,11 @@
 
 # DISCLAIMER:
 
-ESP: Todos los scripts necesarios estan incluidos. Algunos funcionamientos pueden tener resultados inesperados por el estado del desarrollo y labores de optimizacion que estoy llevando a cabo.
+#### ESP: 
+
+Todos los ficheros necesarios se encuentran en una instancia de almacenamiento en mi servidor creado para este proyecto, si el acceso no estuviese disponible, contactadme para poder solucionarlo lo antes posible.
+
+Todos los scripts necesarios estan incluidos. Algunos funcionamientos pueden tener resultados inesperados por el estado del desarrollo y labores de optimizacion que estoy llevando a cabo.
 
 Se ha entrenado a la IA con muchas menos muestras y epocas de lo ideal para poder mostrar todo un desarrollo funcional.
 
