@@ -28,14 +28,14 @@ async def predict(file: UploadFile):
 
     print(f'Best 5 matches:')
     result = []
-    dictionary = {}
     for i in range(5):
+        d = {}
         label_idx = top_labels[i]
         label_name = labels[label_idx]
         confidence = 100 * top_certainty[i]
-        dictionary["character"] = chr(int(label_name[2:], 16))
-        dictionary["confidence"] = confidence
+        d["character"] = chr(int(label_name[2:], 16))
+        d["confidence"] = confidence
         print(f'Guess {i + 1}: {chr(int(label_name[2:], 16))} with a {confidence:02.2f}% confidence')
-        result.append(dictionary)
+        result.append(d)
     result = {"result": result}
     return JSONResponse(content=result, media_type='application/json charset=utf-8')
