@@ -102,12 +102,19 @@ This project is on a developing stage and we have not implemented a script to au
 
 ## API Reference
 
-#### Get a prediction
+#### Get a prediction(Legacy)
 
 ```https
-  POST kanji.otterleek.com/
+  POST kanji.otterleek.com
     or
   POST otterleek.ddns.net:39000/
+```
+#### Get a prediction(Latest. Not available in APP)
+
+```https
+  POST tfg.otterleek.com
+    or
+  POST otterleek.ddns.net:3399/
 ```
 
 | Parameter | Type        | Description                |
