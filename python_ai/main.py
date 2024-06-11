@@ -4,8 +4,8 @@ import tensorflow as tf
 from PIL import Image
 from fastapi import FastAPI, UploadFile
 from fastapi.responses import JSONResponse
-import utils.format_image_process as fip
-
+# import utils.format_image_process as fip
+from utils import format_image_process as fip
 model = tf.keras.models.load_model('./trained_models/fullmodel.keras')
 labels = np.load('./dataset/labels.npy')
 
