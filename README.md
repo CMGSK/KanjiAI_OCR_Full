@@ -25,6 +25,8 @@
 
 [app_release.apk](https://nextcloud.otterleek.com/s/P7ipkp33ANG98Cj)
 
+[Memoria/Docuemntacion](https://nextcloud.otterleek.com/s/sjEMT8L4ipXsF9r)
+
 # DISCLAIMER:
 
 #### ESP: 
