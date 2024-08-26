@@ -1,3 +1,6 @@
+# Disclaimer
+Make sure you're not in the `master_nodoc` defaulted branch if you want to check the original documentation of the project.
+
 ## Documentation
 
 [Tensorflow](https://www.tensorflow.org/api_docs)
