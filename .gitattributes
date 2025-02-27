@@ -1,2 +1,2 @@
 python_ai/* linguist-documentation=false
-flutter_app/flutter_files/lib/* linguist-documentation=false
+flutter_app/flutter_files/lib/** linguist-documentation=false
